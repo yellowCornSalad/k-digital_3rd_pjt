@@ -42,6 +42,3 @@ db.people.find( { age: { $gt: 30 } } ).count()
 db.people.distinct( "status" ) 
 db.people.findOne()
 db.people.find().limit(1)
-
-
-db.people.find( {status:
