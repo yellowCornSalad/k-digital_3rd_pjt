@@ -8,8 +8,9 @@ https://www.susansijang.co.kr/nsis/miw/ko/info/miw3110
 
 ### 크롤링 항목 - 어종(species), 산지(origin), 포장(unit), 평균가(avg_price)
 
-### 스크랩 해올 데이터들(총 9종)
-  - 킹크랩
+### 스크랩 해올 데이터들(총 10종)
+  - 광어
+  - 킹크랩(왕게)
   - 갑오징어
   - 한치
   - 은갈치
