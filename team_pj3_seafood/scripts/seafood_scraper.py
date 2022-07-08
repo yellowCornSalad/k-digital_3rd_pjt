@@ -17,10 +17,14 @@ options.add_experimental_option("excludeSwitches", ["enable-logging"])
 driver = webdriver.Chrome(options=options)
 driver.get("https://www.susansijang.co.kr/nsis/miw/ko/info/miw3130")
 select = Select(driver.find_element_by_id('kdfshCode'))
+<<<<<<< HEAD
 select.select_by_visible_text('우럭')
+=======
+select.select_by_visible_text('넙치(광어)')
+>>>>>>> ac94b4b8703c8307f44c15c8da454553ce53232d
 btn = driver.find_element_by_id('searchBtn')
 btn.click()
-dates = date_range("2017-01-01", "2021-12-31")
+dates = date_range("2022-01-02", "2022-07-06")
 result = []
 result.append(["날짜", "어종", "산지","규격", "포장","수량","중량","평균가"])
 for date in dates:
@@ -86,7 +90,7 @@ for date in dates:
         continue
 # t = datetime.today().strftime("%Y-%m-%d-%H")
 base_path = './seafood_data_junho/'
-file_name = base_path + "seafood_2022-06-30" + ".csv"
+file_name = base_path + "넙치2022" + ".csv"
 with open(file_name, 'a', encoding="utf-8", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(result)
