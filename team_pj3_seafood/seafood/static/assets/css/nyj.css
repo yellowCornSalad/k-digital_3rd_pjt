@@ -2,12 +2,12 @@ a.nav-link.mb-sm-3.mb-md-0.active{
   background-color: #b0bcff;
 }
 
-.tab-pane.fade.active.show{
-  height: 390px;
+/* .tab-pane.fade.active.show{
+  height: 550px;
 }
 .tab-pane.fade{
-  height: 390px;
-}
+  height: 550px;
+} */
 
 img.navbar-brand-img{
   position: relative;
@@ -29,4 +29,17 @@ p.subtitle{
   font-size: 12.8px;
   position: relative;
   bottom: 44px;
+}
+
+h6.yj{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 29px;
+  color: whitesmoke;
+}
+h2.subtitle{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+img.seafood{
+  width: 550px;
 }
