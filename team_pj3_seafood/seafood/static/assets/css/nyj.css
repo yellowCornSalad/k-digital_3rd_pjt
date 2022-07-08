@@ -1,0 +1,32 @@
+a.nav-link.mb-sm-3.mb-md-0.active{
+  background-color: #b0bcff;
+}
+
+.tab-pane.fade.active.show{
+  height: 390px;
+}
+.tab-pane.fade{
+  height: 390px;
+}
+
+img.navbar-brand-img{
+  position: relative;
+  right: 68px;
+}
+p.navbar-brand-img{
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 25px;
+  position: relative;
+  bottom: 35px;
+  left: 21px;
+}
+div.sidenav-header{
+  height: 98px;
+}
+
+p.subtitle{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12.8px;
+  position: relative;
+  bottom: 44px;
+}
