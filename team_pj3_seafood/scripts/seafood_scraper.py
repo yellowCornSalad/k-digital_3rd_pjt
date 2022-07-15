@@ -1,5 +1,5 @@
 from time import sleep
-from tkinter.tix import Select
+# from tkinter.tix import Select
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from datetime import datetime, timedelta
@@ -7,11 +7,16 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import random
 import csv
+
+
 def date_range(start, end):
     start = datetime.strptime(start, "%Y-%m-%d")
     end = datetime.strptime(end, "%Y-%m-%d")
-    dates = [(start + timedelta(days=i)).strftime("%Y-%m-%d") for i in range((end-start).days+1)]
+    dates = [(start + timedelta(days=i)).strftime("%Y-%m-%d")
+             for i in range((end-start).days+1)]
     return dates
+
+
 options = webdriver.ChromeOptions()
 options.add_experimental_option("excludeSwitches", ["enable-logging"])
 driver = webdriver.Chrome(options=options)
@@ -22,15 +27,16 @@ btn = driver.find_element_by_id('searchBtn')
 btn.click()
 dates = date_range("2022-01-02", "2022-07-06")
 result = []
-result.append(["날짜", "어종", "산지","규격", "포장","수량","중량","평균가"])
+result.append(["날짜", "어종", "산지", "규격", "포장", "수량", "중량", "평균가"])
 for date in dates:
     try:
-        driver.find_element(By.ID, 'searchStartDe').send_keys(Keys.CONTROL, 'a')
+        driver.find_element(By.ID, 'searchStartDe').send_keys(
+            Keys.CONTROL, 'a')
         driver.find_element(By.ID, 'searchStartDe').send_keys(date)
         driver.find_element(By.ID, 'searchEndDe').send_keys(Keys.CONTROL, 'a')
         driver.find_element(By.ID, 'searchEndDe').send_keys(date)
         driver.find_element(By.ID, 'searchBtn').click()
-        sleep(random.uniform(1,3))
+        sleep(random.uniform(1, 3))
     # while(driver.find_element_by_xpath('//*[@id="contents"]/form[2]/div[2]/a[4]').text!="다음 페이지로 가기"):
     #     for i in range(5,14):
     #        ## 데이터 불러오기
@@ -72,7 +78,7 @@ for date in dates:
                     weight = item[5]
                     avg_price = item[8]
                     # print(f"날짜: {date}, 어종: {species}, 산지: {origin}, 포장: {unit}, 평균가: {avg_price}")
-                    temp=[]
+                    temp = []
                     temp.append(date)
                     temp.append(species)
                     temp.append(origin)
